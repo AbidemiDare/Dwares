@@ -1,0 +1,298 @@
+ <!-- header -->
+ <header>
+   <div class="header-wrapper">
+      <!-- website name -->
+       <div class="web-name">
+           <h2><span>D</span>mobile</h2>
+       </div>
+
+       <button class="web-join">join</button>
+
+       <div class="web-aside"> 
+          <button id="header-cart"><i class="fa-solid fa-shopping-cart"></i></button>
+          <!-- <span><i class="fa-solid fa-ellipsis-vertical"></i></span> -->
+          <span id="header-bar"><i class="fa-solid fa-bars"></i></span>
+      </div>
+
+      <!-- <span><i class="fa-brands fa-twitter"></i></span> -->
+         
+       <div class="header-aside">
+       <!-- header nav links -->
+       <div class="header-links">
+           <ul>
+            <!-- nav link one -->
+              <!-- <li><a href="">home</a></li> -->
+            <!-- nav link two -->
+              <li><a href="">products <span>
+               <i class="fa-solid fa-chevron-down"></i></span>
+            </a>
+                 <ul class="dropdown">
+                    <li><a href="">BMW</a></li>
+                    <li><a href="">Camry</a></li>
+                    <li><a href="">Toyota</a></li>
+                    <li><a href="">Honda</a></li>
+                 </ul>
+              </li>
+
+              <!-- anv link three -->
+              <li><a href="">services <span>
+               <i class="fa-solid fa-chevron-down"></i>
+              </span></a>
+                  <ul class="dropdown">
+                     <li><a href="">iBuy</a></li>
+                     <li><a href="">iSell</a></li>
+                     <li><a href="">iSwap</a></li>
+                  </ul>
+              </li>
+
+              <!-- nav link four -->
+              <!-- <li><a href="">faqs</a></li> -->
+              <!-- nav link five -->
+              <li><a href="">contact</a></li>
+       </div>
+
+       <span id="header-aside-btn"><i class="fa-solid fa-shopping-cart"></i></span>
+
+       <button class="header-btn btn">Create an account</button>
+      </div>
+
+    </div>
+ </header>
+ <!-- End of header section -->
+
+   <!-- Menu container -->
+   <section class="menu-container">
+      <div class="menu-wrapper">
+         <div class="menu-info">
+            <div class="web-name"> 
+               <h2><span>D</span>mobile</h2>
+            </div>
+
+            <span class="cancel-menu"><i class="fa-solid fa-xmark"></i></span>
+
+         </div>
+
+         <div class="menu-links">
+            <ul>
+               <!-- menu link one -->
+               <li class="menu-item"><a href="">home</a></li>
+
+               <!-- menu link two -->
+               <li class="menu-item"><a href="">products <span><i class="fa-solid fa-caret-down"></i></span></a>
+                  <ul class="dropdown-menu">
+                     <li><a href="">BMW</a></li>
+                    <li><a href="">Camry</a></li>
+                    <li><a href="">Toyota</a></li>
+                    <li><a href="">Honda</a></li>
+                  </ul>
+               </li>
+
+               <!-- menu link three -->
+               <li class="menu-item"><a href="">services <span><i class="fa-solid fa-caret-down"></i></span></a>
+                  <ul class="dropdown-menu">
+                      <li><a href="">iBuy</a></li>
+                     <li><a href="">iSell</a></li>
+                     <li><a href="">iSwap</a></li>
+                  </ul>               
+               </li>
+
+            <!-- menu link four -->
+            <li class="menu-item"><a href="">faqs</a></li>
+
+            <!-- menu link five- -->
+            <li class="menu-item"><a href="">contact</a></li>
+            </ul>
+         </div>
+
+         <!-- menu btns -->
+      <!-- <div class="menu-btns">
+          <button class="menu-btn menu-btn-one">Log in</button>
+          <button class="menu-btn menu-btn-two">Register</button>
+      </div> -->
+
+      <!-- menu socials -->
+      <div class="menu-socials">
+         <h4>Connect with us</h4>
+         <div class="menu-social-icons">
+             <span><i class="fa-brands fa-facebook"></i></span>
+         <span><i class="fa-brands fa-twitter"></i></span>
+         <span><i class="fa-brands fa-instagram"></i></span>
+         <span><i class="fa-brands fa-linkedin"></i></span>
+         </div>
+        
+      </div>
+      </div>
+   </section>
+   <!-- end of menu container -->
+
+      <!---- SIGNUP SECTION- ---->
+    <section class="signup--section">
+      <div class="overlay">
+         <!-- form details------->
+        <div class="form-details">
+         <!-- form image for Desktop view -->
+          <div class="form-img">
+            <img class="login-img" src="./src/Images/login-img.jpg" width="350" alt="" />
+          </div>
+
+          <!-------- form info ------>
+          <div class="form">
+          <form action="">
+            <!-- Remove signup form -->
+            <span class="cancel-signup"><i class="fa-solid fa-xmark"></i></span>
+            <!-- signup header -->
+            <h3 class="form-header">Get Started!</h3>
+            <!-- sign up deatils -->
+            <div class="form-row">
+              <label for=-"name"><b>Firstname: </b></label>
+              <input
+                type="text"
+                id="name"
+              />
+            </div>
+
+            <div class="form-row">
+              <label for="lname"><b>Lastname: </b> </label>
+              <input
+                type="text"
+                id="lname"
+              />
+            </div>
+
+            <div class="form-row">
+              <label for="email"><b>Email: </b></label>
+             <input type="text" id="email" />
+            </div>
+
+            <div class="form-row">
+              <label for="password"><b>Password: </b></label>
+              <input
+                type="password"
+                id="password"
+               required
+              />
+              <div class="row-icon">
+              <button class="password-btn row-btn">
+                <span><i class="fa-regular fa-eye fa-pass-eye"></i></span>
+                <span><i class="fa-regular fa-eye-slash fa-pass-slash"></i></span>
+              </button>
+              </div>
+            </div>
+
+              <div class="form-row">
+              <label for="password"><b>Confirm password: </b></label>
+              <input
+                type="password"
+                id="confirm-password"
+              required/>
+              <div class="row-icon">
+              <button class="confirm-password-btn row-btn">
+                <span><i class="fa-regular fa-eye fa-confirm-eye"></i></span>
+                <span><i class="fa-regular fa-eye-slash fa-confirm-slash"></i></span>
+              </button>
+               </div>
+              </div>
+
+              <div class="form-xtra">
+                   <input type="checkbox" name="checkbox" id="checkbox">
+              <p>I agree to the terms & conditions</p>
+              </div>
+           
+            <div class="form-submit-btn">
+              <button class="form-btn">Register Now</button>
+            </div>
+
+            <div class="form-det">
+              <h4>Already have an account? <a href="" id="show-log">Log in</a></h4>
+            </div>
+          </div>
+        </form>
+        </div>
+      </div>
+    </section>
+<!-- end of signup section -->
+
+<!-- Login section --- -->
+    <!-- LOGIN SECTION -->
+    <section class="login-section">
+      <div class="login-wrapper">
+        <span class="cancel-login">
+            <i class="fa-solid fa-xmark"></i>
+        </span>
+
+        <div class="login-form-details">
+           <div class="form-img">
+            <img class="login-img" src="./src/Images/loginImg-one.jpg" width="350" alt="" />
+          </div>
+
+        <form action="" class="login-form">
+          <div class="login-header">
+            <h2>welcome</h2>
+            <!-- <div>D</div> -->
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email: </label>
+            <input type="email" value="johnDoe@email.com" id="email">
+          </div>
+        
+          <div class="form-row">
+ <label for="password">Password: </label>
+            <input type="password" name="password" id="log-password">
+            <button class="login-btn">  
+              <span><i class="fa-regular fa-eye log-eye"></i></span>        <span><i class="fa-regular fa-eye-slash log-slash"></i></span>
+</button>
+          </div>
+
+          <button class="log-btn">
+                Log in
+          </button>
+
+          <div class="form-xtra">
+            <div class="form-xtra-left">
+  <input type="checkbox" name="checkbox" id="checkbox"> 
+            <h4>Remember me</h4>
+            </div>
+          <div class="form-xtra-right">
+            <h3><a href="">forgot password</a></h3>
+          </div>
+          </div>
+
+          <div class="form-social">
+            <a href=""><i class="fa-solid fa-envelope"></i>email</a>
+              <a href=""><i class="fa-brands fa-google"></i>google</a>
+            <a href=""><i class="fa-brands fa-facebook"></i>facebook</a>
+          </div>
+        </form>
+                </div>
+              </div>
+    </section>
+    <!-- end of login section -->
+
+
+       <!-- Hero section -->
+    <section class="hero-section">
+          <div class="hero-wrapper">
+              <div class="hero-info">
+                <h1>Your home of quality <span>gadget</span></h1>
+                <div class="hero-search">
+                  <input type="search" name="search" id="search" placeholder="search for an item...">
+                <button type="submit" id="hero-search-btn">Search</button>
+                </div>
+              </div>
+          </div>
+    </section>
+
+    <section class="social-handles">
+        <div class="social-wrapper">
+          <a href="">
+            <span><i class="fa-brands fa-facebook"></i></span>
+          </a>
+          <a href="">
+            <span><i class="fa-brands fa-twitter"></i></span>
+          </a>
+          <a href="">
+            <span><i class="fa-brands fa-instagram"></i></span>
+          </a>
+        </div>
+    </section>
