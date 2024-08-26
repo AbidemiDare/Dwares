@@ -1,5 +1,6 @@
+
 .login-section {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 50;
@@ -7,6 +8,7 @@
   height: 100vh;
   background: var(--greyClr800);
   display: none;
+  /* overflow-y: hidden; */
 }
 
 .show {
@@ -87,6 +89,14 @@
   display: none;
 }
 
+.login-btn .fa-eye.show {
+  display: block;
+}
+
+.login-btn .fa-eye-slash.hidden {
+  display: none;
+}
+
 .log-btn {
   cursor: pointer;
   margin-top: -0.3rem;
@@ -143,6 +153,7 @@
 }
 
 .form-social a {
+  padding: 8px 5px;
   cursor: pointer;
   display: block;
   margin-bottom: 0.2rem;
@@ -152,9 +163,9 @@
   font-size: 0.9rem;
   font-weight: 600;
   background: #666;
+  background: var(--black);
   border-radius: 5px;
   color: var(--white);
-  padding: 5px 0;
   transition: var(--transition);
   -webkit-transition: var(--transition);
   -moz-transition: var(--transition);

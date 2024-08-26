@@ -18,33 +18,28 @@ main {
   margin: 0 auto;
 }
 
-.products-btn-container {
-  /* max-width: 95vw; */
-  margin: 0 auto;
-  margin-bottom: 2rem;
-  position: relative;
-}
-
 .products-btns {
-  max-width: 280px;
+  width: 100%;
+  max-width: 260px;
   display: flex;
   align-items: center;
-  overflow: scroll;
+  margin: 0 auto;
+  margin-bottom: 2.5rem;
+  overflow: auto;
 }
 
 .product-btn {
+  flex: 0 0 auto;
   background: #f0f0f0;
   color: var(--black);
   min-width: 80px;
-  text-align: center;
-  padding: 15px 25px;
   margin: 5px;
   border-radius: 32px;
   transition: var(--transition);
-  -webkit-transition: ;
-  -moz-transition: ;
-  -ms-transition: ;
-  -o-transition: ;
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
   font-size: 0.8rem;
   font-weight: 600;
   cursor: pointer;
@@ -99,43 +94,53 @@ main {
 
  */
 
- .product-active {
+.product-active {
   background: var(--primaryClr200);
 }
 
-@media screen and (min-width: 380px) {
-  .products-btn-container {
-    max-width: 500px;
-  }
-
+@media screen and (min-width: 310px) {
   .products-btns {
-    max-width: 600px;
-    overflow: visible;
+    max-width: 300px;
   }
+}
 
+@media screen and (min-width: 360px) {
+  .products-btns {
+    max-width: 400px;
+  }
+}
+
+@media screen and (min-width: 380px) {
   .product-btn {
-    min-width: 80px;
-    font-size: 0.9rem;
     font-weight: 600;
     padding: 18px 16px;
     text-align: center;
   }
-
 }
 
-@media screen and (min-width: 400px) {
-  .products-btns {
-    max-width: 500px;
-    margin: 0 auto;
-  }
-}
-
-@media screen and (min-width: 520px) {
-  .products-btn-container {
-    max-width: 1120px;
-  }
-
+@media screen and (min-width: 450px) {
   .products-btns {
     justify-content: center;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .products-btns {
+    max-width: 700px;
+  }
+
+  .product-btn {
+    min-width: 100px;
+  }
+}
+
+@media screen and (min-width: 820px) {
+  .products-btns {
+    max-width: 1120px;
+    grid-gap: 0 0.2rem;
+  }
+
+  .product-btn {
+    padding: 20px;
   }
 }

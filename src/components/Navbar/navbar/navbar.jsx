@@ -1,6 +1,4 @@
 import { useState } from "react";
-import Header from "../header";
-import Bar from "../bar";
 import Menu from "../Menu/menu";
 import SignUp from "../signup/signup";
 import LogIn from "../login/login";
@@ -8,20 +6,50 @@ import "./navbar.css";
 
 function Navbar() {
   const [bar, setBar] = useState(false);
-  const [join, setJoinWeb] = useState(false);
+  const [join, setJoin] = useState(false);
   const [displayMenu, setDisplayMenu] = useState(false);
 
-  const openBar = () => {
-    setBar(!bar);
+  const [sign, setSign] = useState(false);
+  const [login, setLogin] = useState(false);
+  const [menu, setMenu] = useState(false);
+
+  // open desktop signUp page
+  const openSign = () => {
+    setSign(!sign);
+
+    document.body.style.overflow = "hidden";
   };
 
   const openSignUpBar = () => {
     setDisplayMenu(!displayMenu);
-    console.log("Hello world");
+
+    openSign();
+  };
+
+  // open login page
+  const openLogin = () => {
+    setLogin(!login);
+
+    document.body.style.overflow = "hidden";
   };
 
   const joinWeb = () => {
-    setJoinWeb(!join);
+    setJoin(!join);
+
+    openLogin();
+  };
+
+  // open menu bar
+  const openMenu = () => {
+    setMenu(!menu);
+
+    document.body.style.overflow = "hidden";
+  };
+
+  const openBar = () => {
+    setBar(!bar);
+
+    openMenu();
   };
 
   return (
@@ -42,7 +70,9 @@ function Navbar() {
             <button id="header-cart">
               <i className="fa-solid fa-shopping-cart"></i>
             </button>
-            <Bar openBar={openBar} />
+            <button onClick={openBar} className="header-bar">
+              <i className="fa-solid fa-bars"></i>
+            </button>
           </div>
 
           <div className="header-aside">
@@ -101,14 +131,16 @@ function Navbar() {
               <i className="fa-solid fa-shopping-cart"></i>
             </span>
 
-            <Header openSignUpBar={openSignUpBar} />
+            <button className="btn header-btn" onClick={openSignUpBar}>
+              Create an account
+            </button>
           </div>
         </div>
       </header>
 
-      <Menu bar={bar} />
-      <SignUp displayMenu={displayMenu} />
-      <LogIn join={join} />
+      <Menu bar={bar} menu={menu} setMenu={setMenu} />
+      <SignUp sign={sign} setSign={setSign} displayMenu={displayMenu} />
+      <LogIn join={join} login={login} setLogin={setLogin} />
     </div>
   );
 }
