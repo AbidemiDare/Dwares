@@ -29,6 +29,7 @@ main {
   max-width: 280px;
   display: flex;
   align-items: center;
+  overflow: scroll;
 }
 
 .product-btn {
@@ -53,7 +54,7 @@ main {
   -o-border-radius: 32px;
 }
 
-.scroll-btn {
+/* .scroll-btn {
   cursor: pointer;
   background: none;
   border: none;
@@ -96,7 +97,9 @@ main {
   display: none;
 }
 
-.product-active {
+ */
+
+ .product-active {
   background: var(--primaryClr200);
 }
 
@@ -118,9 +121,6 @@ main {
     text-align: center;
   }
 
-  .scroll-btn {
-    font-size: 1.4rem;
-  }
 }
 
 @media screen and (min-width: 400px) {
@@ -138,7 +138,4 @@ main {
   .products-btns {
     justify-content: center;
   }
-}
-
-@media screen and (min-width: 768px) {
 }
