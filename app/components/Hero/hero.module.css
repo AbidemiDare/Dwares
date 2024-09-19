@@ -1,5 +1,6 @@
 .heroSection {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("/Images/bcg-one.jpg") center/cover no-repeat;
   width: 100%;
   height: 80vh;
@@ -17,21 +18,25 @@
 
 @keyframes animate {
   0% {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    background:
+      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
       url("/Images/bcg-one.jpg") center/cover no-repeat;
   }
   50% {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    background:
+      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
       url("/Images/bcg-two.jpg") center/cover no-repeat;
     transition-delay: 2ms;
   }
   75% {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    background:
+      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
       url("/Images/bcg-three.jpg") center/cover no-repeat;
     transition-delay: 5ms;
   }
   100% {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    background:
+      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
       url("/Images/bcg-one.jpg") center/cover no-repeat;
     transition-delay: 6ms;
   }
@@ -42,14 +47,21 @@
   width: 80vw;
   max-width: 1120px;
   margin: 0 auto;
-  padding-top: 160px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
 }
 
 .heroInfo h1 {
   color: var(--white);
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: bold;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .heroInfo h1 span {
@@ -120,10 +132,6 @@
 }
 
 @media screen and (min-width: 768px) {
-  .heroWrapper {
-    padding-top: 160px;
-  }
-
   .heroInfo {
     max-width: 700px;
   }
@@ -148,7 +156,7 @@
 
 @media screen and (min-width: 992px) {
   .heroWrapper {
-    padding-top: 190px;
+    padding-bottom: 50px;
   }
 }
 

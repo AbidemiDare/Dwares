@@ -19,7 +19,7 @@
 }
 
 .formDetails {
-  padding: 3rem 0;
+  padding: 3.5rem 0;
   width: 85vw;
   max-width: 1120px;
   margin: 0 auto;
@@ -32,7 +32,7 @@
 .cancelSignup {
   cursor: pointer;
   position: absolute;
-  right: 9%;
+  right: 5%;
   top: 2%;
   font-size: 2rem;
   font-weight: 700;

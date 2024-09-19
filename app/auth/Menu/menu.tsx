@@ -62,16 +62,16 @@ const Menu: React.FC<MenuProps> = ({ menu, displayBar }) => {
                     }`}
                   >
                     <li>
-                      <a href="">BMW</a>
+                      <a href="">Fruits</a>
                     </li>
                     <li>
-                      <a href="">Camry</a>
+                      <a href="">meat</a>
                     </li>
                     <li>
-                      <a href="">Toyota</a>
+                      <a href="">vegetables</a>
                     </li>
                     <li>
-                      <a href="">Honda</a>
+                      <a href="">pet supplies</a>
                     </li>
                   </ul>
                 </li>
@@ -91,13 +91,13 @@ const Menu: React.FC<MenuProps> = ({ menu, displayBar }) => {
                     }`}
                   >
                     <li>
-                      <a href="">iBuy</a>
+                      <a href="">Food delivery</a>
                     </li>
                     <li>
-                      <a href="">iSell</a>
+                      <a href="">Food catering</a>
                     </li>
                     <li>
-                      <a href="">iSwap</a>
+                      <a href="">Food consultancy</a>
                     </li>
                   </ul>
                 </li>
