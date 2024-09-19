@@ -5,14 +5,9 @@ import style from "./main.module.css";
 import Hero from "../Hero/hero";
 import ProductList from "../productsList/productList";
 import { FaGreaterThan, FaLessThan } from "react-icons/fa6";
+import { Product } from "../types";
 
-interface productt {
-  category: string;
-  title: string;
-  tags: string[];
-}
-
-const Main: React.FC<productt> = () => {
+const Main: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState<string>("");
   const buttons = ["All", "fruits", "meat", "pet supplies"];
   const [currentPage, setCurrentPage] = useState<number>(1);
@@ -34,8 +29,9 @@ const Main: React.FC<productt> = () => {
         const data = await response.json();
         setProducts(data.products);
 
+        console.log(products);
         const filteredItems = searchQuery
-          ? data.products.filter((product: productt) =>
+          ? data.products.filter((product: Product) =>
               product.title.toLowerCase().includes(searchQuery.toLowerCase())
             )
           : data.products;
@@ -72,7 +68,7 @@ const Main: React.FC<productt> = () => {
     const filtered =
       category === "All"
         ? products
-        : products.filter((product: productt) =>
+        : products.filter((product: Product) =>
             product.tags.includes(category)
           );
     setFilteredProducts(filtered);
@@ -101,7 +97,6 @@ const Main: React.FC<productt> = () => {
           </div>
 
           <ProductList
-            products={products}
             buttons={buttons}
             loading={loading}
             filteredProducts={filteredProducts}

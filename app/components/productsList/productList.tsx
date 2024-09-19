@@ -2,26 +2,17 @@
 
 import { useCart } from "../cart/cartContext";
 import style from "./products.module.css";
-
-interface Product {
-  id: number;
-  title: string;
-  price: number;
-  images: string[];
-  category: string;
-  tags: string[];
-  quantity: number;
-}
+import { Product } from "../types";
 
 interface AddedProducts {
-  products: Product[];
+  // products: Product[];
   buttons: string[];
   loading: boolean;
   filteredProducts: Product[];
 }
 
 export default function ProductList({
-  products,
+  // products,
   buttons,
   loading,
   filteredProducts,
