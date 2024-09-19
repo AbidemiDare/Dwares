@@ -26,19 +26,19 @@
     background:
       linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
       url("/Images/bcg-two.jpg") center/cover no-repeat;
-    transition-delay: 2ms;
+    transition-delay: 2s;
   }
   75% {
     background:
       linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
       url("/Images/bcg-three.jpg") center/cover no-repeat;
-    transition-delay: 5ms;
+    transition-delay: 5s;
   }
   100% {
     background:
       linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url("/Images/bcg-one.jpg") center/cover no-repeat;
-    transition-delay: 6ms;
+      url("/Images/bcg-four.jpg") center/cover no-repeat;
+    transition-delay: 8s;
   }
 }
 

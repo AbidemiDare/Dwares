@@ -21,14 +21,14 @@
 
 .webName h2 span {
   background: var(--white);
-  padding: 0.1rem 0.4rem;
+  padding: 0.2rem 0.5rem;
   color: var(--black);
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-weight: bold;
 }
 
 .webName h2 {
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 700;
   color: var(--white);
 }
@@ -82,10 +82,10 @@
   border: none;
   background: none;
   transition: var(--transition);
-  -webkit-transition: var(--transition);
-  -moz-transition: var(--transition);
-  -ms-transition: var(--transition);
-  -o-transition: var(--transition);
+  -webkit-transition:;
+  -moz-transition:;
+  -ms-transition:;
+  -o-transition:;
 }
 
 .headerBar {

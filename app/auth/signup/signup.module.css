@@ -38,22 +38,26 @@
   font-weight: 700;
   color: #ff6347;
   transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
 }
 
 .cancelSignup:hover {
   background: var(--white);
   border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  -webkit-border-radius:;
+  -moz-border-radius:;
+  -ms-border-radius:;
+  -o-border-radius:;
 }
 
 .form .formHeader {
   text-align: center;
   font-size: 1.6rem;
   font-weight: bold;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1rem;
   color: var(--primaryClr800);
 }
 
@@ -113,7 +117,7 @@
   display: flex;
   gap: 0.5rem;
   align-items: center;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.2rem;
 }
 
 .form .formXtra p {
@@ -142,6 +146,7 @@
   font-weight: bold;
   color: var(--greyClr300);
   font-size: 0.9rem;
+  margin-right: 1rem;
 }
 
 .form .formDet button {
