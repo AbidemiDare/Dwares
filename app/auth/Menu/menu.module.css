@@ -1,0 +1,214 @@
+.menuContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  width: 100%;
+  height: 100vh;
+  background: var(--greyClr300);
+  animation: slideDown 0.5s 1 ease;
+  -webkit-animation: slideDown 0.5s 1 ease;
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translate(0, -200px);
+    -webkit-transform: translate(0, -200px);
+    -moz-transform: translate(0, -200px);
+    -ms-transform: translate(0, -200px);
+    -o-transform: translate(0, -200px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+  }
+}
+
+.menuWrapper {
+  width: 85vw;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+.menuInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.webName h2 span {
+  background: var(--white);
+  padding: 0.1rem 0.4rem;
+  color: var(--black);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.webName h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.cancelMenu {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ff6347;
+}
+
+.menuLinks {
+  padding: 1.5rem 0 0.5rem;
+}
+
+.menuLinks li {
+  position: relative;
+}
+
+.menuLinks li a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--black);
+  padding: 0.8rem 0;
+  font-size: 16px;
+  text-transform: capitalize;
+  font-weight: 400;
+  letter-spacing: 1.2px;
+  position: relative;
+}
+
+.menuLinks a button {
+  color: var(--black);
+  font-size: 16px;
+  border: none;
+  background: none;
+}
+
+.menuLinks li .dropdownMenu {
+  margin-top: -5px;
+  padding-left: 50px;
+  animation: slideDownD 0.5s 1 ease;
+  display: none;
+  -webkit-animation: slideDownD 0.5s 1 ease;
+}
+
+.menuLinks li .dropdownMenu.show {
+  display: block;
+}
+
+@keyframes slideDownD {
+  from {
+    opacity: 0;
+    transform: translate(0, -120px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+  }
+}
+
+.menuBtns {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  margin-top: 0.8rem;
+}
+
+.menuBtns .menuBtn {
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border: none;
+  background: none;
+  padding: 0.9rem 0;
+  color: var(--black);
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+}
+
+.menuBtns .menuBtnOne {
+  margin-bottom: 0.5rem;
+  background: var(--white);
+  color: var(--black);
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+.menuBtns .menuBtnTwo {
+  background: transparent;
+  border: 1px solid var(--black);
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+.menuSocials h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.menuSocialIcons {
+  display: flex;
+  gap: 1rem 0.3rem;
+  align-items: center;
+}
+
+.menuSocialIcons span {
+  width: 40px;
+  height: 40px;
+  font-size: 1.3rem;
+  padding: 0.2rem;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  background: var(--greyClr300);
+  background: black;
+  color: white;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.fa-twitter {
+  color: var(--secondaryClr900);
+}
+
+.fa-facebook {
+  color: var(--secondaryClr100);
+}
+
+.fa-instagram {
+  color: #ff6347;
+}
+
+.fa-linkedin {
+  color: #0000ff;
+}

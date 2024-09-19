@@ -1,0 +1,303 @@
+.signupSection {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  width: 100%;
+  height: 100vh;
+  background: var(--black);
+  display: none;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+.show {
+  display: block;
+}
+
+.formDetails {
+  padding: 3rem 0;
+  width: 85vw;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.formDetails .formImg {
+  display: none;
+}
+
+.cancelSignup {
+  cursor: pointer;
+  position: absolute;
+  right: 9%;
+  top: 2%;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ff6347;
+  transition: var(--transition);
+}
+
+.cancelSignup:hover {
+  background: var(--white);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.form .formHeader {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+  color: var(--primaryClr800);
+}
+
+.form .formRow {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.form .formRow label {
+  font-size: 0.9rem;
+  margin-bottom: 3px;
+  color: var(--greyClr400);
+}
+
+.form .formRow input {
+  padding: 7px 5px;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.rowIcon {
+  position: absolute;
+  top: 45%;
+  right: 3%;
+  font-size: 0.8rem;
+}
+
+.rowIcon .passwordBtn,
+.rowIcon .confirmPasswordBtn {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.rowIcon .passwordBtn .faPassEye {
+  display: none;
+}
+
+.rowIcon .passwordBtn .faPassEye.show {
+  display: block;
+}
+
+.rowIcon .passwordBtn .faConfirmPassEye {
+  display: none;
+}
+
+.rowIcon .passwordBtn .faConfirmPassEye.show {
+  display: block;
+}
+
+.form .formRow input:focus {
+  border: none;
+}
+
+.form .formXtra {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.form .formXtra p {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: tomato;
+}
+
+.form .formSubmitBtn {
+  width: 100%;
+}
+
+.form .formSubmitBtn .formBtn {
+  cursor: pointer;
+  margin: 0 auto;
+  border: none;
+  padding: 0.6rem 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  background: var(--primaryClr500);
+  color: var(--black);
+}
+
+.form .formDet {
+  margin-top: 0.7rem;
+  font-weight: bold;
+  color: var(--greyClr300);
+  font-size: 0.9rem;
+}
+
+.form .formDet button {
+  color: var(--secondaryClr800);
+  cursor: pointer;
+  font-size: 0.8rem;
+  border: none;
+  background: transparent;
+}
+
+.form .formDet button:hover {
+  text-decoration: underline;
+  color: var(--primaryClr800);
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (min-width: 520px) {
+  .formDetails {
+    width: 70vw;
+  }
+
+  .form .formHeader {
+    margin-bottom: 1.3rem;
+  }
+
+  .form .formRow label {
+    margin-bottom: 5px;
+  }
+
+  .form .formDet button {
+    color: var(--greyClr300);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .formDetails .formImg {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+  }
+
+  .formDetails .formImg .signupImg {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  .formDetails {
+    margin: 0;
+  }
+
+  .form {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    padding: 3rem 2rem;
+    padding-bottom: 0;
+  }
+
+  .form .formRow label {
+    margin-bottom: 3px;
+    color: var(--greyClr400);
+  }
+
+  .form .formRow input {
+    padding: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .form .formRow input::placeholder {
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    color: var(--black);
+  }
+
+  .form .formRow input:focus {
+    border: none;
+  }
+
+  .form .formXtra {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .form .formXtra p {
+    color: var(--black);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: tomato;
+  }
+
+  .form .formSubmitBtn {
+    width: 100%;
+  }
+
+  .form .formSubmitBtn .formBtn {
+    margin: 0 auto;
+    border: none;
+    padding: 0.5rem 2rem;
+    font-weight: 500;
+    background: var(--primaryClr500);
+    color: var(--black);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .form .formHeader {
+    margin-bottom: 2rem;
+  }
+
+  .form {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding: 3rem 2rem;
+  }
+
+  .form .formRow {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    align-items: center;
+    margin-bottom: 0.6rem;
+  }
+
+  .form .formRow label {
+    font-size: 1rem;
+  }
+
+  .form .formRow input {
+    margin-bottom: 7px;
+    padding: 8px;
+  }
+
+  .rowIcon {
+    top: 20%;
+  }
+
+  .form .formXtra {
+    margin: 1.5rem 0;
+  }
+
+  .form .formXtra p {
+    font-size: 0.8rem;
+  }
+
+  .form .formSubmitBtn {
+    margin-bottom: 1rem;
+  }
+}

@@ -1,0 +1,157 @@
+.footer {
+  background: black;
+  overflow: hidden;
+}
+
+.footerWrapper {
+  padding: 1.2rem 0 0;
+  width: 90vw;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.footerHeader {
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-top: 1.5rem;
+  margin-bottom: 5px;
+  color: tomato;
+  color: var(--primaryClr600);
+}
+
+.footerEmail {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.footerInput {
+  position: relative;
+  width: 100%;
+}
+
+.footerInput input {
+  width: 220px;
+  margin-top: 0.3rem;
+  padding: 0.45rem 0;
+  padding-left: 5px;
+  background: none;
+  border: none;
+  border: 1px solid var(--white);
+  border-radius: 1.5rem;
+  -webkit-border-radius: 1.5rem;
+  -moz-border-radius: 1.5rem;
+  -ms-border-radius: 1.5rem;
+  -o-border-radius: 1.5rem;
+}
+
+.footerArrow {
+  position: absolute;
+  top: 8px;
+  left: 189px;
+  border: none;
+  background: none;
+  outline: none;
+  font-size: 1.5rem;
+  color: var(--white);
+}
+
+.item {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  margin-bottom: 3px;
+  color: var(--white);
+}
+
+.hr {
+  margin-top: 2rem;
+  background: var(--black);
+  filter: brightness(50%);
+  -webkit-filter: brightness(50%);
+}
+
+.footerEnding {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.footerEnding h3 {
+  font-size: 0.8rem;
+  padding-right: 2px;
+  color: var(--white);
+}
+
+.footerEnding h3 span {
+  background: var(--white);
+  color: var(--black);
+  font-size: 1rem;
+  padding: 3px 5px;
+}
+
+.footerEnding p {
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: tomato;
+  margin-top: 5px;
+}
+
+.footerEnding p span {
+  padding-top: 1rem;
+  font-size: 0.7rem;
+  color: var(--white);
+}
+
+@media screen and (min-width: 480px) {
+  .footerWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  .footerHeader {
+    font-size: 1.1rem;
+  }
+
+  .footerEnding h3 {
+    font-size: 1.1rem;
+    margin-top: -0.3rem;
+  }
+
+  .footerEnding h3 span {
+    padding: 0.3rem 0.5rem;
+    font-size: 1.3rem;
+  }
+
+  .footerEnding p {
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+
+  .footerEnding p span {
+    padding-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--white);
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .footerWrapper {
+    width: 80vw;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footerWrapper {
+    width: 85vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 0 2rem;
+  }
+
+  .footerEnding {
+    padding: 1.5rem 0;
+  }
+}

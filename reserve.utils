@@ -267,7 +267,7 @@
                 </div>
               </div>
     </section>
-    <!-- end of login section -->
+    <!-- end of login* section -->
 
 
        <!-- Hero section -->
@@ -296,3 +296,396 @@
           </a>
         </div>
     </section>
+
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+ <!-- fontawesome cdjns -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <link rel="stylesheet" href="./src/normalize.css"/>
+ <link rel="stylesheet" href="./src/main.css"/>
+
+ import { useState } from "react";
+import React from "react";
+import Menu from "../../src/components/auth/Menu/menu";
+import SignUp from "../../src/components/auth/signup/signup";
+import LogIn from "../../src/components/auth/login/login";
+import styles from "./navbar.module.css";
+// import Image from "next/image";
+
+const Navbar: React.FC = () => {
+  const [bar, setBar] = useState(false);
+  const [join, setJoin] = useState(false);
+  const [displayMenu, setDisplayMenu] = useState(false);
+
+  // const [sign, setSign] = useState(false);
+  const [login, setLogin] = useState(false);
+  const [menu, setMenu] = useState(false);
+
+  // open desktop signUp page
+  const openSignUpBar = () => {
+    setDisplayMenu(!displayMenu);
+  };
+
+  // open login page
+  const openLogin = () => {
+    setLogin(!login);
+
+    document.body.style.overflow = "hidden";
+  };
+
+  const joinWeb = () => {
+    setJoin(!join);
+
+    openLogin();
+  };
+
+  // open menu bar
+  const openMenu = () => {
+    setMenu(!menu);
+
+    document.body.style.overflow = "hidden";
+  };
+
+  const openBar = () => {
+    setBar(!bar);
+
+    openMenu();
+  };
+
+  return (
+    <div>
+      <header>
+        <div className={styles.headerWrapper}>
+          <div className={styles.webName}>
+            <h2>
+              <span>D</span>mobile
+            </h2>
+          </div>
+
+          <button className={styles.web--join} onClick={joinWeb}>
+            join
+          </button>
+
+          <div className={styles.web__aside}>
+            <button className={styles.header__cart}>
+              <i className="fa-solid fa-shopping-cart"></i>
+            </button>
+            <button onClick={openBar} className={styles.header--bar}>
+              <i className="fa-solid fa-bars"></i>
+            </button>
+          </div>
+
+          <div className={styles.header--aside}>
+            <div className={styles.header__links}>
+              <ul>
+                <li>
+                  <a href="">
+                    products{" "}
+                    <span>
+                      <i className="fa-solid fa-chevron-down"></i>
+                    </span>
+                  </a>
+                  <ul className="dropdown">
+                    <li>
+                      <a href="">BMW</a>
+                    </li>
+                    <li>
+                      <a href="">Camry</a>
+                    </li>
+                    <li>
+                      <a href="">Toyota</a>
+                    </li>
+                    <li>
+                      <a href="">Honda</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="">
+                    services{" "}
+                    <span>
+                      <i className="fa-solid fa-chevron-down"></i>
+                    </span>
+                  </a>
+                  <ul className="dropdown">
+                    <li>
+                      <a href="">iBuy</a>
+                    </li>
+                    <li>
+                      <a href="">iSell</a>
+                    </li>
+                    <li>
+                      <a href="">iSwap</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="">contact</a>
+                </li>
+              </ul>
+            </div>
+
+            <span id="header-aside-btn">
+              <i className="fa-solid fa-shopping-cart"></i>
+            </span>
+
+            <button className={${styles.btn} ${styles.header--btn}} onClick={openSignUpBar}>
+              Create an account
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <Menu bar={bar} menu={menu} setMenu={setMenu} />
+      <SignUp displayMenu={displayMenu} />
+      <LogIn join={join} login={login} setLogin={setLogin} />
+    </div>
+  );
+};
+
+export default Navbar;
+
+
+
+
+"use client";
+
+import { useState } from "react";
+// import React from "react";
+import LogIn from "../../auth/login/login";
+import SignUp from "../../auth/signup/signup";
+import Menu from "../../auth/Menu/menu";
+import style from "./navbar.module.css";
+import { FaBars } from "react-icons/fa";
+import { FaShoppingCart } from "react-icons/fa";
+import { FaChevronDown } from "react-icons/fa6";
+import Link from "next/link";
+// import Link from "next/link";
+
+const Navbar = () => {
+  const [bar, setBar] = useState(false);
+  const [join, setJoin] = useState(false);
+  const [displayMenu, setDisplayMenu] = useState(false);
+
+  // const [sign, setSign] = useState(false);
+  const [login, setLogin] = useState(false);
+  const [menu, setMenu] = useState(false);
+
+  // open desktop signUp page
+  const openSignUpBar = () => {
+    setDisplayMenu(!displayMenu);
+  };
+
+  // open login page
+  const openLogin = () => {
+    setLogin(!login);
+
+    document.body.style.overflow = "hidden";
+  };
+
+  const joinWeb = () => {
+    setJoin(!join);
+
+    openLogin();
+  };
+
+  // open menu bar
+  const openMenu = () => {
+    setMenu(!menu);
+
+    document.body.style.overflow = "hidden";
+  };
+
+  const openBar = () => {
+    setBar(!bar);
+
+    openMenu();
+  };
+
+  return (
+    <>
+      <header>
+        <div className={style.headerWrapper}>
+          <div className={style.webName}>
+            <h2>
+              <span>D</span>mobile
+            </h2>
+          </div>
+
+          <button className={style.webJoin} onClick={joinWeb}>
+            join
+          </button>
+
+          <div className={style.webAside}>
+            <button className={style.headerCart}>
+              <FaShoppingCart />
+            </button>
+            <button onClick={openBar} className={style.headerBar}>
+              <FaBars />
+            </button>
+          </div>
+
+          <div className={style.headerAside}>
+            <div className={style.headerLinks}>
+              <ul>
+                <li>
+                  <Link href="/products">
+                    products{" "}
+                    <span>
+                      <FaChevronDown />
+                    </span>
+                  </Link>
+                  <ul className={style.dropdown}>
+                    <li>
+                      <a href="">BMW</a>
+                    </li>
+                    <li>
+                      <a href="">Camry</a>
+                    </li>
+                    <li>
+                      <a href="">Toyota</a>
+                    </li>
+                    <li>
+                      <a href="">Honda</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <Link href="/services">
+                    services{" "}
+                    <span>
+                      <FaChevronDown />
+                    </span>
+                  </Link>
+                  <ul className={style.dropdown}>
+                    <li>
+                      <a href="">iBuy</a>
+                    </li>
+                    <li>
+                      <a href="">iSell</a>
+                    </li>
+                    <li>
+                      <a href="">iSwap</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <Link href="/contact">contact</Link>
+                </li>
+              </ul>
+            </div>
+
+            <span className={style.headerAsideBtn}>
+              <i className="fa-solid fa-shopping-cart"></i>
+            </span>
+
+            <button
+              className={`btn ${style.headerBtn} `}
+              onClick={openSignUpBar}
+            >
+              Create an account
+            </button>
+          </div>
+        </div>
+
+        <Menu bar={bar} menu={menu} setMenu={setMenu} />
+        <SignUp displayMenu={displayMenu} />
+        <LogIn join={join} login={login} setLogin={setLogin} />
+      </header>
+    </>
+  );
+};
+
+export default Navbar;
+
+
+  <div key={product.id} className={style.productBase}>
+            <div className={style.productImgContainer}>
+              <img
+                src={
+                  product.images.length === 1
+                    ? product.images[0]
+                    : product.images[1]
+                }
+                className={style.productImg}
+                alt="phone image"
+              />
+            </div>
+
+            <div className={style.productInfo}>
+              <h4 className={style.productName}>{product.title}</h4>
+              <p className={style.productDescription}>brand: {product.brand}</p>
+              {/* <p className={style.productCategory}>
+                Category: {product.category}
+              </p> */}
+              <p className={style.productPrice}>{`$${product.price}`}</p>
+            </div>
+
+            <div className={style.productBtns}>
+              <button className={`${style.productButton} ${style.productCart}`}>
+                Add to cart
+              </button>
+              <button className={`${style.productButton} ${style.productCart}`}>
+                Buy now
+              </button>
+            </div>
+          </div>
+
+                                ? filteredProducts.images[0]
+                      : filteredProducts.images[1]
+
+                       useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await fetch(
+          `https://dummyjson.com/products?limit=${productsPerPage}&skip=${
+            (currentPage - 1) * productsPerPage
+          }`
+        );
+        const data = await response.json();
+        setProducts(data.products);
+        // setTotalPages(Math.ceil(data.total / productsPerPage));
+      } catch (error) {
+        console.log("Error fetching products: ", error);
+      }
+    };
+
+           <div className={style.pageWrapper}>
+            <button
+              className={`${style.pageBtn} ${style.pageBtnLeft}`}
+              onClick={() => handleChange(currentPage - 1)}
+              disabled={currentPage === 1}
+            >
+              <FaLessThan />
+            </button>
+
+            {visiblePages.map((page) => (
+              <button
+                key={page}
+                className={`${style.pageNumber} ${
+                  currentPage === page ? style.activePage : ""
+                }`}
+                onClick={() => handleChange(page)}
+              >
+                {page}
+              </button>
+            ))}
+
+            <button
+              className={`${style.pageBtn} ${style.pageBtnRight}`}
+              onClick={() => handleChange(currentPage + 1)}
+              disabled={currentPage === totalPages}
+            >
+              <FaGreaterThan />
+            </button>
+          </div>
+        </section>
+      </main>
+    </div>
+  );
+}

@@ -1,0 +1,215 @@
+.heroSection {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/Images/bcg-one.jpg") center/cover no-repeat;
+  width: 100%;
+  height: 80vh;
+  z-index: -5;
+  overflow: hidden;
+  transition: var(--transition);
+  animation: animate 16s ease-in-out infinite 2s;
+  -webkit-animation: animate 16s ease-in-out infinite 2s;
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-tran-sition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+@keyframes animate {
+  0% {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("/Images/bcg-one.jpg") center/cover no-repeat;
+  }
+  50% {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("/Images/bcg-two.jpg") center/cover no-repeat;
+    transition-delay: 2ms;
+  }
+  75% {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("/Images/bcg-three.jpg") center/cover no-repeat;
+    transition-delay: 5ms;
+  }
+  100% {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("/Images/bcg-one.jpg") center/cover no-repeat;
+    transition-delay: 6ms;
+  }
+}
+
+.heroWrapper {
+  text-align: center;
+  width: 80vw;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding-top: 160px;
+}
+
+.heroInfo h1 {
+  color: var(--white);
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.heroInfo h1 span {
+  color: tomato;
+}
+
+.heroSearch {
+  position: relative;
+  width: 100%;
+}
+
+.heroSearch input {
+  width: 100%;
+  padding: 15px 10px;
+  padding-right: 0;
+  border: none;
+  outline: none;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.heroSearch input::placeholder {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.heroSearchBtn {
+  text-align: center;
+  padding: 0 12px;
+  position: absolute;
+  top: 2%;
+  bottom: 2%;
+  right: 0;
+  border: none;
+  background: var(--primaryClr100);
+  color: var(--white);
+  cursor: pointer;
+  font-size: 1rem;
+  text-transform: lowercase;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+@media screen and (min-width: 420px) {
+  .heroInfo {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .heroInfo h1 {
+    font-size: 2.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .heroSearch {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .heroWrapper {
+    padding-top: 160px;
+  }
+
+  .heroInfo {
+    max-width: 700px;
+  }
+
+  .heroInfo h1 {
+    font-size: 2.3rem;
+  }
+
+  .heroSearch {
+    max-width: 600px;
+  }
+
+  .heroBtnSearch {
+    padding: 0 20px;
+    font-size: 1.2rem;
+  }
+
+  .heroBtnSearch:hover {
+    background: var(--black);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .heroWrapper {
+    padding-top: 190px;
+  }
+}
+
+/*
+==========================
+social handles
+==========================
+*/
+
+.socialHandles {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .socialHandles {
+    display: block;
+    position: fixed;
+    top: 30%;
+    left: 0;
+  }
+
+  .socialWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem 0;
+  }
+
+  .socialWrapper span {
+    width: 50px;
+    cursor: pointer;
+    display: block;
+    background: tomato;
+    color: var(--white);
+    font-size: 1.2rem;
+    padding: 0.6rem 0;
+    transition: var(--transition);
+    text-align: center;
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+  }
+
+  .socialWrapper span:hover {
+    transform: scaleX(1.02);
+    -webkit-transform: scaleX(1.02);
+    -moz-transform: scaleX(1.02);
+    -ms-transform: scaleX(1.02);
+    -o-transform: scaleX(1.02);
+  }
+
+  .socialWrapper a .fa-facebook {
+    color: var(--white);
+  }
+
+  .socialWrapper a .fa-twitter {
+    color: var(--secondaryClr600);
+  }
+
+  .socialWrapper a .fa-instagram {
+    color: var(--white);
+    background: tomato;
+  }
+}

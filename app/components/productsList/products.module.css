@@ -1,0 +1,148 @@
+.productsContainer {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto;
+  place-items: center;
+  gap: 1.5rem 0;
+  margin-bottom: 2rem;
+}
+
+.productBase {
+  cursor: pointer;
+  max-width: 250px;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+.productImgContainer {
+  margin-bottom: 0.3em;
+}
+
+.productImg {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.productInfo {
+  padding-left: 5px;
+}
+
+.productName {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+}
+
+.productCategory {
+  width: max-content;
+  padding: 2px;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  background: #ff6347;
+  color: var(--white);
+  font-weight: bold;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.productPrice {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: var(--grey);
+  margin-bottom: 5px;
+}
+
+.productBtns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 0 0.7rem;
+  margin: 2px 0;
+  padding: 0;
+}
+
+.productButton {
+  font-size: 0.8rem;
+  font-family: 500;
+  cursor: pointer;
+  border: none;
+  background: var(--black);
+  color: var(--white);
+  border-radius: 2rem;
+  padding: 0.8rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+}
+
+.productCart {
+  background: var(--black);
+}
+
+@media screen and (min-width: 520px) {
+  .productsContainer {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1.5rem;
+  }
+
+  .productBase {
+    width: 220px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .productsContainer {
+    grid-template-columns: repeat(3, auto);
+    gap: 2rem;
+  }
+
+  .productBase {
+    max-width: 300px;
+  }
+
+  .productButton:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .productsContainer {
+    width: 70vw;
+  }
+
+  .productBase {
+    max-width: 320px;
+  }
+
+  .productBase:hover {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+  }
+
+  .productImgContainer {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+  }
+
+  .productImg {
+    height: 100%;
+    width: 100%;
+  }
+}

@@ -1,0 +1,409 @@
+.headerAside {
+  display: none;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 90;
+}
+
+.headerWrapper {
+  max-width: 95vw;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0.5rem;
+}
+
+.webName h2 span {
+  background: var(--white);
+  padding: 0.1rem 0.4rem;
+  color: var(--black);
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.webName h2 {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.webBtn {
+  border: none;
+  background: none;
+  outline: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.webLogin,
+.webSignUp {
+  cursor: pointer;
+  padding: 0.7rem 0.5rem;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--white);
+}
+
+.webLogin {
+  background: var(--primaryClr100);
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  border-top-right-radius: 0%;
+  border-bottom-right-radius: 0%;
+}
+
+.webSignUp {
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  border-top-left-radius: 0%;
+  border-bottom-left-radius: 0%;
+  background: var(--greyClr200);
+}
+
+.webAside {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0 1rem;
+  margin-top: 0.3rem;
+}
+
+.headerCart {
+  font-size: 1rem;
+  cursor: pointer;
+  color: var(--primaryClr900);
+  border: none;
+  background: none;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+.headerBar {
+  background: none;
+  border: none;
+  color: var(--primaryClr500);
+  cursor: alias;
+  transition: var(--transition);
+  font-size: 1.2rem;
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+@media screen and (min-width: 520px) {
+  .webName h2 span {
+    padding: 0.2rem 0.5rem;
+    font-size: 1.5rem;
+  }
+
+  .webName h2 {
+    font-size: 1.2rem;
+  }
+
+  .webJoin .webBtn {
+    padding: 0.4rem;
+    font-size: 0.9rem;
+  }
+
+  .headerCart {
+    font-size: 1.3rem;
+  }
+
+  .headerBar {
+    font-size: 1.6rem;
+  }
+
+  .webLogin,
+  .webSignUp {
+    padding: 1.1rem 0.9rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .headerCart {
+    display: none;
+  }
+
+  .headerBar {
+    display: none;
+  }
+
+  .webBtn {
+    display: none;
+  }
+
+  .headerWrapper {
+    width: 95vw;
+  }
+
+  .webName h2 span {
+    font-size: 1.5rem;
+    padding: 0.2rem 0.5rem;
+  }
+
+  .webName h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
+  .headerAside {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0 2rem;
+  }
+
+  .headerLinks {
+    display: block;
+  }
+
+  .headerLinks ul {
+    display: flex;
+    align-items: center;
+    gap: 0 1rem;
+  }
+
+  .headerLinks ul .headerList {
+    position: relative;
+  }
+
+  .navBtn {
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0 3px;
+    color: var(--white);
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+  }
+
+  .navBtn:hover {
+    color: var(--greyClr200);
+  }
+
+  .headerLinks ul li .navBtn span {
+    font-size: 13px;
+    margin-top: 0.3rem;
+    color: var(--primaryClr200);
+  }
+
+  .headerLinks ul li .dropdown {
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: -8px;
+    background: var(--white);
+    width: 90px;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .headerLinks ul li:hover ul {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .headerLinks ul li .dropdown li a {
+    color: var(--black);
+    width: 100%;
+    font-weight: 500;
+    display: block;
+    padding: 0.8rem 0.5rem;
+    text-align: center;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+  }
+
+  .headerLinks ul li .dropdown li a:hover {
+    background: var(--primaryClr800);
+  }
+
+  .headerAsideBtn {
+    color: rgba(0, 255, 0, 1);
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+
+  .headerAsideBtn .fa-shopping-cart {
+    font-size: 1.2rem;
+  }
+
+  .headerBtn {
+    cursor: pointer;
+    color: var(--white);
+    border: none;
+    background: none;
+    outline: none;
+    font-weight: 400;
+  }
+
+  .webLogin,
+  .webSignUp {
+    padding: 0.8rem 1rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .webName h2 span {
+    font-size: 1.6rem;
+  }
+
+  .webName h2 {
+    font-size: 1.3rem;
+  }
+
+  .navBtn {
+    font-size: 16px;
+  }
+
+  .headerLinks ul li ul {
+    left: -5px;
+    width: 120px;
+  }
+
+  .webLogin,
+  .webSignUp {
+    padding: 1rem 1.2rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .headerWrapper {
+    width: 85vw;
+  }
+
+  .webName h2 span {
+    font-size: 1.5rem;
+  }
+
+  .webName h2 {
+    font-size: 1.2rem;
+  }
+
+  .headerAside {
+    gap: 0 2.5rem;
+  }
+
+  .headerLinks ul {
+    gap: 0 1.2rem;
+  }
+
+  .navBtn {
+    font-size: 18px;
+  }
+
+  .headerLinks ul li .navBtnLi span {
+    font-size: 13px;
+  }
+
+  .headerLinks ul li ul li a {
+    font-size: 1rem;
+  }
+
+  .webLogin,
+  .webSignUp {
+    padding: 1.1rem 1.3rem;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .webName h2 {
+    font-size: 1.5rem;
+  }
+
+  .webName h2 span {
+    font-size: 1.8rem;
+  }
+
+  .headerLinks ul li .navBtnLi span {
+    font-size: 12px;
+  }
+
+  .headerLinks ul li ul {
+    left: 5px;
+  }
+
+  .webLogin,
+  .webSignUp {
+    padding: 1rem 0.9rem;
+    font-size: 0.8rem;
+  }
+
+  .webLogin:hover {
+    background: var(--primaryClr200);
+  }
+
+  .webSignUp:hover {
+    background: var(--greyClr300);
+  }
+}
+
+/* on scroll styles */
+.scroll {
+  background: #fff;
+  color: black;
+  box-shadow: 2px 5px 2px var(--white);
+}
+
+.scroll .webBtn {
+  color: var(--black);
+}
+
+.scroll .webName h2 span {
+  background: var(--black);
+  color: var(--white);
+}
+
+.scroll .webName h2 {
+  color: var(--black);
+}
+
+.scroll .headerCart {
+  color: var(--greyClr300);
+}
+
+.scroll .navBtn {
+  color: var(--black);
+}
+
+.scroll .webLogin {
+  background: var(--greyClr200);
+}
+
+.scroll .webSignUp {
+  background: var(--primaryClr100);
+}
+
+.scroll .headerLinks ul li ul {
+  background: var(--black);
+}
+
+.scroll .headerLinks ul li ul li a {
+  color: var(--white);
+}
