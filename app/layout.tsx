@@ -12,7 +12,7 @@ const merriweather = Merriweather({
 });
 
 export const metadata: Metadata = {
-  title: "Phone App",
+  title: "Wares App",
   description: "Web site created with Next.js.",
 };
 
